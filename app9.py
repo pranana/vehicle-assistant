@@ -31,7 +31,7 @@ if "error_message" not in st.session_state:
 # ===================== CUSTOMIZATION SETTINGS =====================
 # Colors (using CFMOTO brand colors)
 MAIN_BG_COLOR = "#121212"  # Dark background
-PRIMARY_COLOR = "#E03C31"  # CFMOTO red
+PRIMARY_COLOR = "#2EAEC2"  # CFMOTO Blue
 SECONDARY_COLOR = "#333333"  # Dark gray for inputs
 TEXT_COLOR = "#FFFFFF"  # White text
 ACCENT_COLOR = "#4B96E6"  # Blue accent
@@ -144,33 +144,33 @@ custom_css = f"""
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # ==================== LOGO FUNCTION ====================
-def add_logo():
+# def add_logo():
     # Replace this with a base64 encoded string of your logo
     # Example for a placeholder logo - replace with your actual CFMOTO logo
-    logo_base64 = """
-    iVBORw0KGgoAAAANSUhEUgAAAGQAAAAoCAYAAAAIeF9DAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9
-    kT1Iw0AcxV9TpSIVBzuIOGSoThZERRy1CkWoEGqFVh1MbvqhNGlIUlwcBdeCgx+LVQcXZ10dXAVB
-    8APE1cVJ0UVK/F9SaBHjwXE/3t173L0DhFqRaVbHOKDptplKxMVMdlUMvCKIAYQxhpjMLGNOkpLw
-    HF/38PH1LsqzvM/9OXqUnMkAn0g8y3TDIt4gnt60dM77xGFWlFTic+IJgy5I/Mh12eU3zkWH/Twz
-    bKRTc4nDxGKujW0tncIMi3FE0tCpb0jHM06ulPMeO/zSsVg16znnPIZzJpW0wosksYiECRnlFFmY
-    ULOSYRpRNY20xDP2eYc/YvmXyKWQqwxGjgVUIprCZg/+B7+7NXMTk24SOA60vjjO+jEI7AKNmudz
-    PjvOiRNAcAY60lL9TQGc/IJp7Wq8AYQ3gcvrvdbkHjD5AH1r0teiKxSkoPRxwfk8J0DvLdCbdXvr
-    nOPwABnq1JRuoDgE+krA+3Wwbh9A4CbQs+bOrXWO0wcgQ7NavgEODkDknC3nc9I72XIg9O74/o2+
-    3L8HZyNyWf2dUgAAAOxJREFUeNrs14EJwjAUBNDrJLqJi+gkbjIKuomT6Ca6ia6gI7iR2sYPQVqM
-    xLv/IMkhoOTDJdDTCQAAAAAAAOA/jLnuSW5VZ+5t6Zl1X2vOvYfHlOSW5Fpk5rOZwzBMx9/LsTS9
-    XWbB3oo+yMvN66GZU77vjV11S/dz5DLo+Q5JHtUndrPk1rvGDlLv9Rz5buUjpFqPECMrQowsQoys
-    2ggxsghZGiHPq62KmP2I/WCX5LbR+xXbxX/IwYYUJhshRhYhRlbdWYeRNYcRYmQRYmStQ4iRRYiR
-    dc7yFgIAAAAAAACAXXkBCKaKeaG/7/4AAAAASUVORK5CYII=
-    """
+    # logo_base64 = """
+    # iVBORw0KGgoAAAANSUhEUgAAAGQAAAAoCAYAAAAIeF9DAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9
+    # kT1Iw0AcxV9TpSIVBzuIOGSoThZERRy1CkWoEGqFVh1MbvqhNGlIUlwcBdeCgx+LVQcXZ10dXAVB
+    # 8APE1cVJ0UVK/F9SaBHjwXE/3t173L0DhFqRaVbHOKDptplKxMVMdlUMvCKIAYQxhpjMLGNOkpLw
+    # HF/38PH1LsqzvM/9OXqUnMkAn0g8y3TDIt4gnt60dM77xGFWlFTic+IJgy5I/Mh12eU3zkWH/Twz
+    # bKRTc4nDxGKujW0tncIMi3FE0tCpb0jHM06ulPMeO/zSsVg16znnPIZzJpW0wosksYiECRnlFFmY
+    # ULOSYRpRNY20xDP2eYc/YvmXyKWQqwxGjgVUIprCZg/+B7+7NXMTk24SOA60vjjO+jEI7AKNmudz
+    # PjvOiRNAcAY60lL9TQGc/IJp7Wq8AYQ3gcvrvdbkHjD5AH1r0teiKxSkoPRxwfk8J0DvLdCbdXvr
+    # nOPwABnq1JRuoDgE+krA+3Wwbh9A4CbQs+bOrXWO0wcgQ7NavgEODkDknC3nc9I72XIg9O74/o2+
+    # 3L8HZyNyWf2dUgAAAOxJREFUeNrs14EJwjAUBNDrJLqJi+gkbjIKuomT6Ca6ia6gI7iR2sYPQVqM
+    # xLv/IMkhoOTDJdDTCQAAAAAAAOA/jLnuSW5VZ+5t6Zl1X2vOvYfHlOSW5Fpk5rOZwzBMx9/LsTS9
+    # XWbB3oo+yMvN66GZU77vjV11S/dz5DLo+Q5JHtUndrPk1rvGDlLv9Rz5buUjpFqPECMrQowsQoys
+    # 2ggxsghZGiHPq62KmP2I/WCX5LbR+xXbxX/IwYYUJhshRhYhRlbdWYeRNYcRYmQRYmStQ4iRRYiR
+    # dc7yFgIAAAAAAACAXXkBCKaKeaG/7/4AAAAASUVORK5CYII=
+    # """
     
-    st.markdown(
-        f"""
-        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-            <img src="data:image/png;base64,{logo_base64}" width="100">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    # st.markdown(
+    #    f"""
+    #    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+    #        <img src="data:image/png;base64,{logo_base64}" width="100">
+    #    </div>
+    #    """,
+        # unsafe_allow_html=True
+    # )
 
 # Function to check if a run is active and cancel it if needed
 def check_active_run(thread_id):
@@ -218,7 +218,7 @@ if model_param and not st.session_state.vehicle_model:
     st.session_state.vehicle_model = model_param
 
 # Add logo at top
-add_logo()
+# add_logo()
 
 # Chat Title and Description
 st.markdown(f"<h1 style='text-align: center;'>Your CFMOTO Vehicle Assistant</h1>", unsafe_allow_html=True)
@@ -440,7 +440,7 @@ st.markdown(
     """
     <div style='position: fixed; bottom: 0; left: 0; width: 100%; background-color: #1E1E1E; 
     padding: 5px; text-align: center; font-size: 12px; color: #888;'>
-        © 2025 CFMOTO Canada. All rights reserved.
+        © 2025 Lab Design. All rights reserved.
     </div>
     """,
     unsafe_allow_html=True
